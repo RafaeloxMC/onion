@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Mrs_Saint_Delafield } from "next/font/google";
+import {
+	Geist,
+	Geist_Mono,
+	Mrs_Saint_Delafield,
+	DM_Sans,
+} from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -18,6 +23,12 @@ const mrsSaintDelafield = Mrs_Saint_Delafield({
 	subsets: ["latin"],
 });
 
+const dmSans = DM_Sans({
+	variable: "--dm-sans",
+	weight: "1000",
+	subsets: ["latin"],
+});
+
 export const metadata: Metadata = {
 	title: "Onion YSWS",
 	description: "Ship a privacy-focused project, get privacy things!",
@@ -31,7 +42,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${geistSans.variable} ${geistMono.variable} ${mrsSaintDelafield.variable} h-full antialiased`}
+			className={`${geistSans.variable} ${geistMono.variable} ${mrsSaintDelafield.variable} ${dmSans.variable} h-full antialiased`}
 		>
 			<body className="min-h-full flex flex-col">{children}</body>
 		</html>

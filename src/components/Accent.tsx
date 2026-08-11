@@ -2,12 +2,7 @@ import { ReactNode } from "react";
 
 function Accent({ children }: { children: ReactNode }) {
 	return (
-		<span
-			style={{
-				color: "var(--accent)",
-				fontFamily: "var(--font-delafield)",
-			}}
-		>
+		<span className="text-(--accent) font-delafield font-extrabold text-5xl not-italic translate-y-2">
 			{children}
 		</span>
 	);
