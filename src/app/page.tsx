@@ -1,11 +1,5 @@
-import Accent from "@/components/Accent";
+import Hero from "@/components/Hero";
 
 export default function Home() {
-	return (
-		<div>
-			<h1 className="flex flex-row items-center justify-center gap-4 h-32">
-				Welcome to <Accent>Onion Ysws</Accent>
-			</h1>
-		</div>
-	);
+	return <Hero />;
 }
